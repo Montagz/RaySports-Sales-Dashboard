@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title='RaySports Analytics', layout='wide')
 
 # 2. Data Loading
-filepath = r'C:\Users\RayTagui.SDE\Desktop\R Project\Portfolio Proj\RaySports_Sales_Data_2022_2025_v2.xlsx'
+filepath = 'RaySports_Sales_Data_2022_2025_v2.xlsx'
 
 @st.cache_data
 def load_data(path):
@@ -213,4 +213,5 @@ with exp_c1:
                            "Margin %": st.column_config.ProgressColumn(format="%.1f%%", min_value=0, max_value=100)})
 with exp_c2:
     st.write("### Data Export")
+
     st.download_button("📥 Download as CSV", data=filtered_df.to_csv(index=False).encode('utf-8'), file_name='RaySports_Data.csv', mime='text/csv', use_container_width=True)
