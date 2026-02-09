@@ -1,4 +1,5 @@
 pandas
 openpyxl
 streamlit
+altair<5
 plotly
